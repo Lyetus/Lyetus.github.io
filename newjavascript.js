@@ -40,7 +40,7 @@ $(function() {
     });
     
     $('#pngA').on("click", function(){
-        alert("Богдан с возу, Игорю легче.");
+        alert("Теперь на GitHub!!!");
     });
     
     $('#button2').on("click", function(){
