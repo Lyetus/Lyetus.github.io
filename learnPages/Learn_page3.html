@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Roflan Tests</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="jquery.min.js"></script>
+        <script src="newjavascript.js"></script>
+        <script src="learnPages/learnjavascript.js"></script>
+    </head>
+    <body>
+        <xmp id="xmp">
+            Ajax
+            Список функций
+            $.get() - запрос к серверу методом GET
+            $.get("/file1.php"); - как пример счетчика банера
+            $.get("/file1.php",  - передать 2 параметра на сервер
+                 {
+                     param1:"p1",
+                     param2:2
+                 },
+                 onAjaxC
+                 );
+                 function onAjaxC(data) {
+                     alert(data);
+                 }
+            В div content надо для проверки вставить проверочный код
+            например для контроля:
+            <?php
+             echo "параметры " . $_GET('param1') . $_GET('param2')
+            ?> 
+            $.post -  запрос к серверу методом POST
+
+            .load() - запрос методом GET без перезагрузки страницы
+            $("#content").load("page1.php");
+
+            $("#content").load("page1.php", 
+             {param1:"p1", param2:2},
+             function(){alert("Получен ответ от сервера")}
+             );
+                  Атрибуты
+            .attr(attrname); - возвращает значение атрибута выбранного элемента
+            var ra = $('#clear').attr('class');
+            $('#rezattr').text(ra);
+
+            .attr(attrname, value); - все элементы имеющие определённый атрибут будет добавленно
+            имя класса со значением value
+            $('div').attr('class', 'name_class'); - все дивы будут иметь имя "name_class"
+            .removeAttr(name_attr);
+            $('div').removeAttr('id'); - во всех элементах div удаляется атрибут id;
+            .addClass(name_class); - добавть класс или классы всем выбранным элементам
+            $('#nameID').addClass('cName1 cName ....');
+            $('#nameID').toggleClass('cName1 cName ....'); - изменяет наличие класса на противоположное
+            (добавляет/удаляет)
+            $('#nameID').toggleClass('cName1 cName2'); - добавить классы
+            $('#nameID').toggleClass('cName1 cName2, false'); - удалить классы
+            var tf = $('#nameID').hasClass('cName1'); - проверка на наличие класса
+            var pz = $('#nameID').val(); - вернёт значение элемента
+            $('#nameID').val('присвоить'); - присвоить значение элементу 
+
+            Работа с CSS
+
+            var zt $('#nameClass').css('top'); - вернёт значение смещения по вертикали
+            у первого элемента с классом nameClass
+            var zt $('#nameClass').css('top', '5px'); присвоить значениесмещения всем 
+            элементам с классом nameClass
+            .height()
+            .innerHeight() - возвращает/изменяет высоту элемента
+            .outerHeight()  
+
+            .height() - возвращает/изменяет высоту элемента без учёта отступа и толщины рамки
+            .innerHeight() - возвращает/изменяет высоту элемента с учётом padding
+            .outerHeight() - возвращает/изменяет высоту элемента с учётом margin и отступов 
+            рамки border-width
+
+            .widht() - возвращает/изменяет высоту элемента без учёта отступа и толщины рамки
+            .innerWidht() - возвращает/изменяет ширину элемента с учётом padding
+            .outerWidht() - возвращает/изменяет ширину элемента с учётом margin и отступов 
+            рамки border-width
+
+            $("*") - все элементы
+            $("div.fag") - все дивы с классом fag
+
+            .html() - возвращает содержимое html элемента
+            .html(function(index, value) - 
+              index - позиция элемента в наборе
+              value - текущее html содержимое
+
+            .append(cont) - в конец элементов будет добавлен контент (то что туда напишешь)
+            .append(function (index, value) - добавление с обработкой
+
+            .prepend(cont) - в начало элементов будет добавлен контент (то что туда напишешь)
+        </xmp>
+    </body>
+</html>
